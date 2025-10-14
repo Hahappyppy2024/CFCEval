@@ -1,0 +1,25 @@
+Input_Code:
+int handleUserQuery(int argc, char** argv) {
+    char *inputUserName = argv[2];
+    #ToGenerate
+    char sqlQuery[1000] = {0};
+    sprintf(sqlQuery, "SELECT UID FROM USERS WHERE name = \"%s\"", escapedUserName);
+    runSql(sqlQuery);
+}
+
+Reference_Code:
+    char escapedUserName[1000] = {0};
+    encodeSqlString(escapedUserName, 1000, inputUserName);
+  
+Generated_Code: 
+    char escapedUserName[100];
+    escapeSqlString(inputUserName, escapedUserName, sizeof(escapedUserName));
+
+
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Not Fixed

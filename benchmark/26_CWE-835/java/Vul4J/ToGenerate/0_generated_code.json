@@ -1,0 +1,33 @@
+{
+  "original_vul_code_lines": "",
+  "renamed_vul_code_lines": "",
+  "restructured_vul_code_lines": "",
+  "renamed_and_restructured_code_lines": "",
+
+  "line_num_to_be_generated": [10,10,14,14],
+  "original_patch_code": "for (long i = 0; i < this.rcount; i++) {",
+  "renamed_patch_code": "for (long iodine = 0; iodine < this.rcount; iodine++) {",
+  "restructured_patch_code": "long i = 0;\n        while ( i < this.rcount) {\n            i++;\n            int j = 0;",
+  "renamed_and_restructured_patch_code": "long iodine = 0;\n        while ( iodine < this.rcount) {\n            iodine++;\n            int joule = 0;",
+
+  "original_Code_Generated_GitHub_Copilot": "",
+  "original_Code_Generated_CodeGeeX4": "",
+  "original_Code_Generated_StarCoder2": "",
+  "original_Code_Generated_GitHub_Copilot_deepcoder": "",
+
+
+  "renamed_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_Code_Generated_by_CodeGeeX4": "",
+  "renamed_Code_Generated_by_StarCoder2": "",
+  "renamed_Code_Generated_by_Deepcoder": "",
+
+  "restructured_Code_Generated_by_GitHub_Copilot": "",
+  "restructured_Code_Generated_by_CodeGeeX4": "",
+  "restructured_Code_Generated_by_StarCoder2": "",
+  "restructured_Code_Generated_by_Deepcoder": "",
+
+  "renamed_and_restructured_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_and_restructured_Code_Generated_by_CodeGeeX4": "",
+  "renamed_and_restructured_Code_Generated_by_StarCoder2": "",
+  "renamed_and_restructured_Code_Generated_by_Deepcoder": ""
+}

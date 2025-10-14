@@ -1,0 +1,24 @@
+Input_Code:
+from twisted.python import log
+
+def validate_and_select_security(self, client_version):
+
+    valid_version_msg_template = "Client version %s is valid"
+    if client_version == self.VERSION:
+        log.msg(valid_version_msg_template % client_version.strip())
+        #ToGenerate
+            return self.select_security_type, 1
+    else:
+        log.err("Can't handle VNC version %r" % client_version)
+        self.transport.loseConnection()
+ 
+Reference_Code: self.transport.write("\x01\x02")  
+
+Generated_Code: if self.select_security_type == 1:
+
+4. Semantic Relevance Tagger — Task Description
+
+Task Description:
+Your task is to assess the semantic relevance between the generated code and the reference code, considering the functionality and security aspects demonstrated in the reference. Given the input code, reference code, and generated code, evaluate whether the generated code is functionally and semantically similar to the reference code. Label as "Relevant" if the generated code closely matches the reference in terms of functionality and security intent, or "Irrelevant" if it significantly diverges.
+
+Label: Irrelevant

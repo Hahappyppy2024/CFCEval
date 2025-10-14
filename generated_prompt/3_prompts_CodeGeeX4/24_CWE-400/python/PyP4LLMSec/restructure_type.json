@@ -1,0 +1,11 @@
+{
+  'If-condition flipping': "",
+  'Loop transformation':"",
+  'Conditional-statement transformation': "",
+  'Function chaining': "",
+  'Function-argument passing':{
+    "Original": "  if quote[0] != 'r':\n        raise Exception(\"Invalid quote type %s\" % quote[0])\n    quote = quote[1:]\n    quote_tokens = quote.split(\":\")\n    if len(quote_tokens) < 3:\n        raise Exception(\"Quote is not compound! %s\" % quote)",
+    "ChangeTo": "invalid_type_msg = \"Invalid quote type %s\"\nnot_compound_msg = \"Quote is not compound! %s\"\n\nif quote[0] != 'r':\n    raise Exception(invalid_type_msg % quote[0])\nquote = quote[1:]\nquote_tokens = quote.split(\":\")\nif len(quote_tokens) < 3:\n    raise Exception(not_compound_msg % quote)\n"
+  } ,
+  'Code-order change': "",
+}

@@ -1,0 +1,8 @@
+{
+  "good": "storePasswordWithEncryption",
+  "secretKey": "encryptionKey",
+  "password": "plaintextPassword",
+  "credentialsDB": "databaseHandle",
+  "stmt": "insertStatement",
+  "setKeyString": "pragmaKeyQuery"
+}

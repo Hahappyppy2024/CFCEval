@@ -1,0 +1,25 @@
+Input_Code: 
+void good_server() {
+  char* query = getenv("QUERY_STRING");
+  puts("<p>Query results for ");
+#To Generate
+  puts("\n<p>\n");
+  puts(do_search(query));
+
+Reference_Code: 
+  char* query_escaped = escape_html(query);
+  puts(query_escaped);
+  free(query_escaped);
+
+
+Generated_Code: 
+  puts(query);
+  puts(""</p>\n"");
+
+
+3. Vulnerability Fix Tagger (Transformed Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code fixes the vulnerability present in the transformed input code (i.e., after code transformation), using the reference code as a guide. Compare the generated code with both the transformed input and the reference code, and assess whether the vulnerability is properly mitigated and whether the fix is consistent with the reference solution. Label the result as "Resolved" if the vulnerability is addressed similarly to the reference code, or "Unresolved" if the vulnerability persists.
+
+Label: Unresolved

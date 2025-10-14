@@ -1,0 +1,24 @@
+Input_Code: 
+int main(int argc, char** argv) {
+	int random_base_safe = rand();
+	int guarded_result;
+#ToGenerate
+} 
+Reference_Code: 
+	if (random_base_safe < INT_MAX - 1000)
+		guarded_result = random_base_safe + 1000;
+	else
+		guarded_result = INT_MAX;
+  
+Generated_Code: 
+// Ensure random_base_safe is non-negative to avoid undefined behavior in the loop
+	if (random_base_safe < 0) {
+		random_base_safe = -random_base_safe;
+	} 
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Poor

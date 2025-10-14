@@ -1,0 +1,11 @@
+{
+  'If-condition flipping':{
+    "Original": "    if self.absolute_url:\n        context_path = self._get_context_path(host, port)\n        client_path = url_path_join(context_path, proxied_path)\n    else:\n        client_path = proxied_path\n",
+    "ChangeTo": "    if not self.absolute_url:\n        client_path = proxied_path\n    else:\n        context_path = self._get_context_path(host, port)\n        client_path = url_path_join(context_path, proxied_path)"
+  },
+  'Loop transformation':"",
+  'Conditional-statement transformation': "",
+  'Function chaining': "",
+  'Function-argument passing':"" ,
+  'Code-order change': ""
+}

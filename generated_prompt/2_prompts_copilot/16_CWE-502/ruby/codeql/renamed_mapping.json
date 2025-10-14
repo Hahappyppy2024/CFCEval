@@ -1,0 +1,6 @@
+{
+  "safe_json_example": "parse_user_from_json",
+  "safe_yaml_example": "parse_user_from_yaml",
+  "safe_oj_example": "parse_user_from_oj",
+  "object": "user_data"
+}

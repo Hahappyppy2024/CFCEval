@@ -1,0 +1,47 @@
+Input_Code: 
+
+from urllib.parse import urlunparse, urlparse, quote
+from jupyter_server.utils import ensure_async, url_path_join
+def get_client_uri(self, protocol, host, port, proxied_path):
+    if not self.absolute_url:
+        client_path = proxied_path
+    else:
+        context_path = self._get_context_path(host, port)
+        client_path = url_path_join(context_path, proxied_path)
+    #ToGenerate
+
+    client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri
+
+Reference_Code: 
+
+ if not client_path.startswith("/"):
+        client_path = "/" + client_path
+
+Generated_Code: 
+client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri 
+
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Not Fixed

@@ -1,0 +1,50 @@
+Input_Code:
+
+public boolean isAllowed(HttpServletRequest request) throws IOException {
+    String requestBody = IOUtils.toString(request.getReader());
+    ScimUser scimUserFromRequest = JsonUtils.readValue(requestBody, ScimUser.class);
+    String id = UaaUrlUtils.extractPathVariableFromUrl(USER_ID_PATH_PARAMETER_INDEX, UaaUrlUtils.getRequestPath(request));
+    String zoneId = IdentityZoneHolder.get().getId();
+    ScimUser scimUserFromDb;
+    try {
+        scimUserFromDb = scimUserProvisioning.retrieve(id, zoneId);
+    } catch (ScimResourceNotFoundException e) {
+        return true;
+    }
+    if (!scimUserFromDb.getPrimaryEmail().equals(scimUserFromRequest.getPrimaryEmail())) {
+        return false;
+    }
+    # To Generate
+    if (!scimUserFromDb.getUserName().equals(scimUserFromRequest.getUserName())) {
+        return false;
+    }
+    if (scimUserFromDb.isVerified() != scimUserFromRequest.isVerified()) {
+        return false;
+    }
+    if (scimUserFromDb.isActive() != (scimUserFromRequest.isActive())) {
+        return false;
+    }
+    if (!scimUserFromDb.getOrigin().equals(scimUserFromRequest.getOrigin())) {
+        return false;
+    }
+    return true;
+}
+
+  
+Reference_Code:
+if (!scimUserFromDb.getEmails().containsAll(scimUserFromRequest.getEmails())) {
+            return false;
+        }
+
+Generated_Code: 
+if (!scimUserFromDb.getDisplayName().equals(scimUserFromRequest.getDisplayName())) {
+        return false;
+    }
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Not Fixed
+

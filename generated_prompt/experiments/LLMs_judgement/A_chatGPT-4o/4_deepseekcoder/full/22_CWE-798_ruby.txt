@@ -1,0 +1,45 @@
+Input_Code: 
+
+require 'rack'
+require 'yaml'
+require 'openssl'
+
+class RackAppGood
+  def call(env)
+    request = Rack::Request.new(env)
+    user_input_password = request.params['password']
+    #ToGenerate
+    config_data = YAML.load_file('config.yml')
+    stored_password_hash = config_data['hashed_password']
+    stored_salt_bytes = config_data['salt']
+    [stored_salt_bytes].pack('H*')
+  end
+end
+
+Reference_Code: 
+    digest_function = OpenSSL::Digest::SHA256.new
+    derived_key = OpenSSL::KDF.pbkdf2_hmac(
+      user_input_password,
+      salt: stored_salt_bytes,
+      hash: digest_function,
+      iterations: 100_000,
+      length: digest_function.digest_length
+    )
+    hashed_user_input = derived_key.unpack('H*').first
+
+    if stored_password_hash == hashed_user_input
+
+Generated_Code: None
+
+Task Description:  
+You are an annotator. Your task is to assess the functional and semantic similarity between the Generated_Code and the Reference_Code, considering the context provided by the Input_Code.  
+
+Please assign a score from 1 to 5 based on how well the Generated_Code aligns with the Reference_Code in terms of correctness, relevance, and completeness:  
+1 — completely irrelevant or incorrect  
+2 — mostly incorrect, with some minor overlap  
+3 — partially correct or relevant, but incomplete  
+4 — mostly correct, with minor differences  
+5 — fully correct and functionally equivalent  
+
+Only use the Reference_Code as the gold-standard answer. Do not consider stylistic preferences or surface-level formatting unless it affects correctness.
+Score:1

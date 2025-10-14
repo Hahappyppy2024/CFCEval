@@ -1,0 +1,24 @@
+Input_Code:
+final static private XMLStreamReader createXMLStreamReader(InputStream inDataSequence) throws XMLStreamException, IOException {
+    XMLInputFactory producer = XMLInputFactory.newInstance();
+    producer.setProperty(XMLInputFactory.IS_REPLACING_ENTITY_REFERENCES, true);
+    producer.setProperty(XMLInputFactory.IS_COALESCING, true);
+    #ToGenerate
+    InputStream in = swatheBeginingOfStringDetachingInDataSequence(inDataSequence);
+    return producer.createXMLStreamReader(in);
+}  
+
+Reference_Code: producer.setProperty(XMLInputFactory.SUPPORT_DTD, false);
+  
+Generated_Code: 
+    producer.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false);
+    producer.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, true);
+    producer.setProperty(XMLInputFactory.SUPPORT_DTD, false);  
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+
+Label: Fixed

@@ -1,0 +1,46 @@
+Input_Code: 
+
+from urllib.parse import urlunparse, urlparse, quote
+from jupyter_server.utils import ensure_async, url_path_join
+def get_client_uri(self, protocol, host, port, proxied_path):
+    if not self.absolute_url:
+        client_path = proxied_path
+    else:
+        context_path = self._get_context_path(host, port)
+        client_path = url_path_join(context_path, proxied_path)
+    #ToGenerate
+
+    client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri
+
+Reference_Code: 
+
+ if not client_path.startswith("/"):
+        client_path = "/" + client_path
+
+Generated_Code: 
+client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri 
+
+4. Semantic Relevance Tagger — Task Description
+
+Task Description:
+Your task is to assess the semantic relevance between the generated code and the reference code, considering the functionality and security aspects demonstrated in the reference. Given the input code, reference code, and generated code, evaluate whether the generated code is functionally and semantically similar to the reference code. Label as "Relevant" if the generated code closely matches the reference in terms of functionality and security intent, or "Irrelevant" if it significantly diverges.
+
+Label: Irrelevant

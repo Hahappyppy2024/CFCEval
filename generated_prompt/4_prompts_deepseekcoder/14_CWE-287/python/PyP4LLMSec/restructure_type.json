@@ -1,0 +1,11 @@
+{
+  'If-condition flipping': "",
+  'Loop transformation':"",
+  'Conditional-statement transformation': "",
+  'Function chaining': "",
+  'Function-argument passing':{
+    "Original": " if version == self.VERSION:\n        log.msg(\"Client version %s is valid\" % version.strip())",
+    "ChangeTo": "valid_version_msg_template = \"Client version %s is valid\"\n    if version == self.VERSION:\n        log.msg(valid_version_msg_template % version.strip())"
+  } ,
+  'Code-order change': ""
+}

@@ -1,0 +1,23 @@
+Input_Code: 
+module GoodMakeGetter
+  def self.create_class_with_getter(method_name, return_value)
+    new_class = Class.new
+    #ToGenerate
+    new_class
+  end
+end
+two = GoodMakeGetter.create_class_with_getter(:two, "bar")
+puts "Two is #{two.new.two}"
+  
+Reference_Code: 
+new_class.module_eval do
+      define_method(method_name) { return_value }
+  
+Generated_Code: None 
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Poor

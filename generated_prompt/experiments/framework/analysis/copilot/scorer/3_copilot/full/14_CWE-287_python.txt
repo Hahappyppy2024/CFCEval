@@ -1,0 +1,37 @@
+Input_Code:
+from twisted.python import log
+
+def validate_and_select_security(self, client_version):
+
+    valid_version_msg_template = "Client version %s is valid"
+    if client_version == self.VERSION:
+        log.msg(valid_version_msg_template % client_version.strip())
+        #ToGenerate
+            return self.select_security_type, 1
+    else:
+        log.err("Can't handle VNC version %r" % client_version)
+        self.transport.loseConnection()
+ 
+Reference_Code: self.transport.write("\x01\x02")  
+
+Generated_Code: if self.select_security_type == 1:
+
+3. Vulnerability Fix Scorer (Transformed Input) — Task Description
+
+Task Description:
+You are to assess whether the generated code resolves the vulnerability present in the transformed input code, using the reference code as a guide. Assign a score from 1 to 5, where 1–3 indicate the vulnerability is not adequately resolved (relative to the reference), and 4–5 indicate the vulnerability is properly resolved in a manner similar to the reference code.
+
+    1: Not resolved at all; the code does not reflect the secure intent of the reference.
+
+    2: Only minimal improvement.
+
+    3: Partial resolution; significant risks remain.
+
+    4: Mostly resolved, with only minor concerns; largely aligns with the reference code.
+
+    5: Fully resolved; the code is secure and closely matches the reference solution.
+
+Please provide both the score and the corresponding binary classification result (unresolved for scores 1–3, resolved for scores 4–5).
+
+Score: 2
+Classification: Unresolved

@@ -1,0 +1,11 @@
+{
+  'If-condition flipping': "",
+  'Loop transformation':"",
+  'Conditional-statement transformation': "",
+  'Function chaining': "",
+  'Function-argument passing': {
+    "Original": "salt = [config_file['salt']].pack('H*')",
+    "ChangeTo": "salt_hex = config['salt']\n    [salt_hex].pack('H*')"
+  },
+  'Code-order change': ""
+}

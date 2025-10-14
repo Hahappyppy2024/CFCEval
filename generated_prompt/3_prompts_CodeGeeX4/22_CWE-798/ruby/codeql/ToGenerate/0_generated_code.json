@@ -1,0 +1,33 @@
+{
+  "original_vul_code_lines": "",
+  "renamed_vul_code_lines": "",
+  "restructured_vul_code_lines": "",
+  "renamed_and_restructured_code_lines": "",
+
+  "line_num_to_be_generated": "",
+  "original_patch_code": "hash = OpenSSL::Digest::SHA256.new\n    dk = OpenSSL::KDF.pbkdf2_hmac(\n      password, salt: salt, hash: hash, iterations: 100_000, length: hash.digest_length\n    )\n    hashed_input = dk.unpack('H*').first\n    if hashed_password == hashed_input",
+  "renamed_patch_code": "digest_function = OpenSSL::Digest::SHA256.new\n    derived_key = OpenSSL::KDF.pbkdf2_hmac(\n      user_input_password,\n      salt: stored_salt_bytes,\n      hash: digest_function,\n      iterations: 100_000,\n      length: digest_function.digest_length\n    )\n    hashed_user_input = derived_key.unpack('H*').first\n\n    if stored_password_hash == hashed_user_input",
+  "restructured_patch_code": "hash = OpenSSL::Digest::SHA256.new\n    dk = OpenSSL::KDF.pbkdf2_hmac(\n      password, salt: salt, hash: hash, iterations: 100_000, length: hash.digest_length\n    )\n    hashed_input = dk.unpack('H*').first\n    if hashed_password == hashed_input",
+  "renamed_and_restructured_patch_code": "digest_function = OpenSSL::Digest::SHA256.new\n    derived_key = OpenSSL::KDF.pbkdf2_hmac(\n      user_input_password,\n      salt: stored_salt_bytes,\n      hash: digest_function,\n      iterations: 100_000,\n      length: digest_function.digest_length\n    )\n    hashed_user_input = derived_key.unpack('H*').first\n\n    if stored_password_hash == hashed_user_input",
+
+  "original_Code_Generated_GitHub_Copilot": "",
+  "original_Code_Generated_CodeGeeX4": "",
+  "original_Code_Generated_StarCoder2": "",
+  "original_Code_Generated_GitHub_Copilot_deepcoder": "",
+
+
+  "renamed_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_Code_Generated_by_CodeGeeX4": "",
+  "renamed_Code_Generated_by_StarCoder2": "",
+  "renamed_Code_Generated_by_Deepcoder": "",
+
+  "restructured_Code_Generated_by_GitHub_Copilot": "",
+  "restructured_Code_Generated_by_CodeGeeX4": "",
+  "restructured_Code_Generated_by_StarCoder2": "",
+  "restructured_Code_Generated_by_Deepcoder": "",
+
+  "renamed_and_restructured_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_and_restructured_Code_Generated_by_CodeGeeX4": "",
+  "renamed_and_restructured_Code_Generated_by_StarCoder2": "",
+  "renamed_and_restructured_Code_Generated_by_Deepcoder": ""
+}

@@ -1,0 +1,27 @@
+Input_Code: 
+module GoodMakeGetter
+  def self.create_class_with_getter(method_name, return_value)
+    new_class = Class.new
+    #ToGenerate
+    new_class
+  end
+end
+two = GoodMakeGetter.create_class_with_getter(:two, "bar")
+puts "Two is #{two.new.two}"
+  
+Reference_Code: 
+new_class.module_eval do
+      define_method(method_name) { return_value }
+  
+Generated_Code: 
+new_class.class_eval do
+      define_method(method_name) do
+        return_value
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+
+Label: Not Fixed

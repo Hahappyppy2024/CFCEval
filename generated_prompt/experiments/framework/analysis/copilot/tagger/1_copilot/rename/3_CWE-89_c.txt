@@ -1,0 +1,24 @@
+Input_Code:
+int handleUserQuery(int argc, char** argv) {
+    char *inputUserName = argv[2];
+    #ToGenerate
+    char sqlQuery[1000] = {0};
+    sprintf(sqlQuery, "SELECT UID FROM USERS WHERE name = \"%s\"", escapedUserName);
+    runSql(sqlQuery);
+}
+
+Reference_Code:
+    char escapedUserName[1000] = {0};
+    encodeSqlString(escapedUserName, 1000, inputUserName);
+  
+Generated_Code: 
+    char escapedUserName[100];
+    escapeSqlString(inputUserName, escapedUserName, sizeof(escapedUserName));
+
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Poor

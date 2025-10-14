@@ -1,0 +1,9 @@
+{
+  "render_prefs_panel": "render_ssh_config_panel",
+  "panelid": "panel_identifier",
+  "action": "user_action",
+  "kwargs": "extra_params",
+  "form": "ssh_form",
+  "delete_form": "delete_ssh_form",
+  "params": "view_context"
+}

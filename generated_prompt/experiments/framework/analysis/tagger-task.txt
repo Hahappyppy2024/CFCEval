@@ -1,0 +1,17 @@
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+
+
+4. Semantic Relevance Tagger — Task Description
+
+Task Description:
+Your task is to assess the semantic relevance between the generated code and the reference code, considering the functionality and security aspects demonstrated in the reference. Given the input code, reference code, and generated code, evaluate whether the generated code is functionally and semantically similar to the reference code. Label as "Relevant" if the generated code closely matches the reference in terms of functionality and security intent, or "Irrelevant" if it significantly diverges.

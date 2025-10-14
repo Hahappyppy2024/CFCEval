@@ -1,0 +1,19 @@
+{
+  "aikTpmFromRegistrar": "aik_b64_from_registrar",
+  "quote": "quote_compound_str",
+  "hash_alg": "hash_algorithm",
+  "compressed": "is_compressed",
+  "aikFromRegistrar": "aik_pem",
+  "quote_tokens": "quote_parts",
+  "quoteblob": "quote_blob",
+  "sigblob": "signature_blob",
+  "pcrblob": "pcr_blob",
+  "quoteFile": "quote_file_path",
+  "aikFile": "aik_file_path",
+  "sigFile": "signature_file_path",
+  "pcrFile": "pcr_file_path",
+  "qfd": "quote_file_fd",
+  "sfd": "signature_file_fd",
+  "pfd": "pcr_file_fd",
+  "afd": "aik_file_fd"
+}

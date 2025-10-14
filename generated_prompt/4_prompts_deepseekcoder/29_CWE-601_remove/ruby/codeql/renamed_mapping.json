@@ -1,0 +1,4 @@
+{
+  "VALID_REDIRECTS": "ALLOWED_REDIRECT_URLS",
+  "target_url": "requested_url_param"
+}

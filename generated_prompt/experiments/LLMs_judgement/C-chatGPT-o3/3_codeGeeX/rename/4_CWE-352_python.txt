@@ -1,0 +1,45 @@
+Input_Code: 
+import logging
+from rdiffweb.controller import Controller, flash
+from rdiffweb.tools.i18n import ugettext as _
+
+ssh_logger = logging.getLogger(__name__)
+
+def render_ssh_keys_view(self, panel_identifier, user_action=None, **extra_args):  # @UnusedVariable
+    ssh_add_form = SshForm()
+    #ToGenerate
+        self._add_key(user_action, ssh_add_form)
+    elif user_action == 'delete' and ssh_delete_form.is_submitted():
+        self._delete_key(user_action, DeleteSshForm())
+    ssh_view_data = {'form': ssh_add_form}
+    try:
+        ssh_view_data["sshkeys"] = [
+            {
+                'title': key.comment or (key.keytype + ' ' + key.key[:18]),
+                'fingerprint': key.fingerprint
+            }
+            for key in self.app.currentuser.authorizedkeys
+        ]
+    except IOError:
+        ssh_view_data["sshkeys"] = []
+        flash(_("Failed to get SSH keys"), level='error')
+        ssh_logger.warning("error reading SSH keys", exc_info=1)
+    return "prefs_sshkeys.html", ssh_view_data
+
+Reference_Code: if user_action == "add" and ssh_add_form.is_submitted():
+
+Generated_Code: if user_action == 'add' and ssh_add_form.is_submitted():
+ 
+
+Task Description:  
+You are an annotator. Your task is to assess the functional and semantic similarity between the Generated_Code and the Reference_Code, considering the context provided by the Input_Code.  
+
+Please assign a score from 1 to 5 based on how well the Generated_Code aligns with the Reference_Code in terms of correctness, relevance, and completeness:  
+1 — completely irrelevant or incorrect  
+2 — mostly incorrect, with some minor overlap  
+3 — partially correct or relevant, but incomplete  
+4 — mostly correct, with minor differences  
+5 — fully correct and functionally equivalent  
+
+Only use the Reference_Code as the gold-standard answer. Do not consider stylistic preferences or surface-level formatting unless it affects correctness.
+Score:5

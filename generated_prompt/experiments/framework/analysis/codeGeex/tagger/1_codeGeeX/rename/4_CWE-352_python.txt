@@ -1,0 +1,42 @@
+Input_Code: 
+import logging
+from rdiffweb.controller import Controller, flash
+from rdiffweb.tools.i18n import ugettext as _
+
+ssh_logger = logging.getLogger(__name__)
+
+def render_ssh_keys_view(self, panel_identifier, user_action=None, **extra_args):  # @UnusedVariable
+    ssh_add_form = SshForm()
+    #ToGenerate
+        self._add_key(user_action, ssh_add_form)
+    elif user_action == 'delete' and ssh_delete_form.is_submitted():
+        self._delete_key(user_action, DeleteSshForm())
+    ssh_view_data = {'form': ssh_add_form}
+    try:
+        ssh_view_data["sshkeys"] = [
+            {
+                'title': key.comment or (key.keytype + ' ' + key.key[:18]),
+                'fingerprint': key.fingerprint
+            }
+            for key in self.app.currentuser.authorizedkeys
+        ]
+    except IOError:
+        ssh_view_data["sshkeys"] = []
+        flash(_("Failed to get SSH keys"), level='error')
+        ssh_logger.warning("error reading SSH keys", exc_info=1)
+    return "prefs_sshkeys.html", ssh_view_data
+
+Reference_Code: if user_action == "add" and ssh_add_form.is_submitted():
+
+Generated_Code: if user_action == 'add' and ssh_add_form.is_submitted():
+ 
+
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Good
+
+

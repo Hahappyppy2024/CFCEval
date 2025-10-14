@@ -1,0 +1,40 @@
+Input_Code: 
+public boolean isSoundWatchword(String encipheredWatchword, String unprocessedWatchword, Object randomData) {
+    #ToGenerate
+    String watchwordB = unifyWatchwordAndRandomData(unprocessedWatchword, randomData, false);
+    String watchwordA = encipheredWatchword + "";
+    watchwordA = isWatchwordCaseInsensitive? watchwordA.toLowerCase(Locale.ENGLISH): watchwordA;
+    watchwordB = isWatchwordCaseInsensitive? watchwordB.toLowerCase(Locale.ENGLISH): watchwordB;
+    return WatchwordEncipherTools.isEqualTo(watchwordA, watchwordB);
+}
+
+Reference_Code:
+if (encipheredWatchword == null) {
+			return false;
+}
+
+Generated_Code: 
+// ...
+    if (unprocessedWatchword == null) {
+        return false;
+    }
+
+4. Semantic Relevance Scorer — Task Description
+
+Task Description:
+You are to assess the semantic relevance between the generated code and the reference code, considering both functionality and security. Assign a score from 1 to 5, where 1–3 indicate insufficient relevance, and 4–5 indicate strong relevance.
+
+    1: Completely irrelevant; the generated code does not match the reference at all.
+
+    2: Mostly irrelevant; only slight similarity.
+
+    3: Somewhat relevant; partial similarity to the reference.
+
+    4: Mostly relevant; covers most aspects of the reference’s functionality and security intent.
+
+    5: Highly relevant; functionally and semantically equivalent to the reference code.
+
+Please provide both the score and the corresponding binary classification result (irrelevant for scores 1–3, relevant for scores 4–5).
+
+Score: 2
+Classification: irrelevant

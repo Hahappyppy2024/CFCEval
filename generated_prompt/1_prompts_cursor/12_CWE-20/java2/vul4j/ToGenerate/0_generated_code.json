@@ -1,0 +1,33 @@
+{
+  "original_vul_code_lines": "",
+  "renamed_vul_code_lines": "",
+  "restructured_vul_code_lines": "",
+  "renamed_and_restructured_code_lines": "",
+
+  "line_num_to_be_generated": [4,4,4,4],
+  "original_patch_code": "if (repository != null) {\n\n\n\n            if (repository.isDirectory()) {\n\n\n                // Check path for nulls\n\n\n                if (repository.getPath().contains(\"\\0\")) {\n\n\n                    throw new IOException(format(\n\n\n                            \"The repository [%s] contains a null character\",\n\n\n                            repository.getPath()));\n\n\n                }\n\n\n            } else {\n\n\n                throw new IOException(format(\n\n\n                        \"The repository [%s] is not a directory\",\n\n\n                        repository.getAbsolutePath()));\n\n\n            }\n\n\n        }",
+  "renamed_patch_code": "if (repository != null) {\n        if (repository.isDirectory()) {\n            // Check path for nulls\n            if (repository.getPath().contains(\"\\0\")) {\n                throw new IOException(format(\n                        \"The repository [%s] contains a null character\",\n                        repository.getPath()));\n            }\n        } else {\n            throw new IOException(format(\n                    \"The repository [%s] is not a directory\",\n                    repository.getAbsolutePath()));\n        }\n    }\n",
+  "restructured_patch_code": "if (repository != null) {\n\n\n\n            if (repository.isDirectory()) {\n\n\n                // Check path for nulls\n\n\n                if (repository.getPath().contains(\"\\0\")) {\n\n\n                    throw new IOException(format(\n\n\n                            \"The repository [%s] contains a null character\",\n\n\n                            repository.getPath()));\n\n\n                }\n\n\n            } else {\n\n\n                throw new IOException(format(\n\n\n                        \"The repository [%s] is not a directory\",\n\n\n                        repository.getAbsolutePath()));\n\n\n            }\n\n\n        }",
+  "renamed_and_restructured_patch_code": "if (repository != null) {\n        if (repository.isDirectory()) {\n            // Check path for nulls\n            if (repository.getPath().contains(\"\\0\")) {\n                throw new IOException(format(\n                        \"The repository [%s] contains a null character\",\n                        repository.getPath()));\n            }\n        } else {\n            throw new IOException(format(\n                    \"The repository [%s] is not a directory\",\n                    repository.getAbsolutePath()));\n        }\n    }\n",
+
+  "original_Code_Generated_GitHub_Copilot": "",
+  "original_Code_Generated_CodeGeeX4": "",
+  "original_Code_Generated_StarCoder2": "",
+  "original_Code_Generated_GitHub_Copilot_deepcoder": "",
+
+
+  "renamed_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_Code_Generated_by_CodeGeeX4": "",
+  "renamed_Code_Generated_by_StarCoder2": "",
+  "renamed_Code_Generated_by_Deepcoder": "",
+
+  "restructured_Code_Generated_by_GitHub_Copilot": "",
+  "restructured_Code_Generated_by_CodeGeeX4": "",
+  "restructured_Code_Generated_by_StarCoder2": "",
+  "restructured_Code_Generated_by_Deepcoder": "",
+
+  "renamed_and_restructured_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_and_restructured_Code_Generated_by_CodeGeeX4": "",
+  "renamed_and_restructured_Code_Generated_by_StarCoder2": "",
+  "renamed_and_restructured_Code_Generated_by_Deepcoder": ""
+}

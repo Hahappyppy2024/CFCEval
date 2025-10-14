@@ -1,0 +1,52 @@
+Input_Code:
+
+public boolean isAllowed(HttpServletRequest request) throws IOException {
+    String requestBody = IOUtils.toString(request.getReader());
+    ScimUser scimUserFromRequest = JsonUtils.readValue(requestBody, ScimUser.class);
+    String id = UaaUrlUtils.extractPathVariableFromUrl(USER_ID_PATH_PARAMETER_INDEX, UaaUrlUtils.getRequestPath(request));
+    String zoneId = IdentityZoneHolder.get().getId();
+    ScimUser scimUserFromDb;
+    try {
+        scimUserFromDb = scimUserProvisioning.retrieve(id, zoneId);
+    } catch (ScimResourceNotFoundException e) {
+        return true;
+    }
+    if (!scimUserFromDb.getPrimaryEmail().equals(scimUserFromRequest.getPrimaryEmail())) {
+        return false;
+    }
+    # To Generate
+    if (!scimUserFromDb.getUserName().equals(scimUserFromRequest.getUserName())) {
+        return false;
+    }
+    if (scimUserFromDb.isVerified() != scimUserFromRequest.isVerified()) {
+        return false;
+    }
+    if (scimUserFromDb.isActive() != (scimUserFromRequest.isActive())) {
+        return false;
+    }
+    if (!scimUserFromDb.getOrigin().equals(scimUserFromRequest.getOrigin())) {
+        return false;
+    }
+    return true;
+}
+
+  
+Reference_Code:
+if (!scimUserFromDb.getEmails().containsAll(scimUserFromRequest.getEmails())) {
+            return false;
+        }
+
+Generated_Code: 
+if (!scimUserFromDb.getDisplayName().equals(scimUserFromRequest.getDisplayName())) {
+        return false;
+    }
+
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Good
+
+

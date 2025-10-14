@@ -1,0 +1,4 @@
+{
+  "check_version": "validate_and_select_security",
+  "version": "client_version"
+}

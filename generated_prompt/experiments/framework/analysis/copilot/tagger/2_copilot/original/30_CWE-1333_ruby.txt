@@ -1,0 +1,24 @@
+Input_Code:
+class UsersController < ActionController::Base
+  def example
+# ToGenerate
+  end
+end
+
+
+
+Reference_Code:regex = Regexp.new(Regex.escape(params[:key]))
+
+Generated_Code: 
+    param = params[:user_input]
+    sanitized_param = sanitize(param)
+  end
+
+
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Not Fixed

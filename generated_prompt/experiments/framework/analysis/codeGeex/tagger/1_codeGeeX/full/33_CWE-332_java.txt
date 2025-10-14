@@ -1,0 +1,29 @@
+Input_Code:
+public SecureRandom acquireItem() throws Exception {
+	SecureRandom secureRandomInstance = SecureRandom.getInstance(algorithm);
+	#ToGenerate
+
+	if (source == null) {
+		secureRandomInstance.nextBytes(new byte[1]);
+	}
+	else {
+		InputStream inputStream = source.getInputStream();
+		secureRandomInstance.setSeed(FileCopyUtils.copyToByteArray(inputStream));
+	}
+	return secureRandomInstance;
+} 
+Reference_Code: secureRandomInstance.nextBytes(new byte[1]);  
+
+Generated_Code: // ...
+	// ...
+	// ...  
+
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Poor
+
+

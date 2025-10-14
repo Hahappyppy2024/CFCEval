@@ -1,0 +1,10 @@
+{
+  "req": "request",
+  "password": "user_input_password",
+  "config_file": "config_data",
+  "hashed_password": "stored_password_hash",
+  "salt": "stored_salt_bytes",
+  "hash": "digest_function",
+  "dk": "derived_key",
+  "hashed_input": "hashed_user_input"
+}

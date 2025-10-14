@@ -1,0 +1,10 @@
+{
+  "get_client_uri": "build_proxied_client_url",
+  "protocol": "scheme",
+  "host": "target_host",
+  "port": "target_port",
+  "proxied_path": "target_path",
+  "context_path": "base_context_path",
+  "client_path": "combined_path",
+  "client_uri": "proxied_url"
+}

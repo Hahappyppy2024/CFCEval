@@ -1,0 +1,18 @@
+@Override
+public String toString() {
+    StringBuilder s = new StringBuilder();
+    s= source != null? s.append("remoteAddress=").append(source):s;
+    if (customerIdentification != null) {
+        s =s.length() > 0?s.append(", "):s;
+        s.append("clientId=");
+        s.append(customerIdentification);
+    }
+    #
+    if (userId != null) {
+        s =s.length() > 0?
+        s.append(", "):s;
+        s.append("userId=");
+        s
+        #
+
+}

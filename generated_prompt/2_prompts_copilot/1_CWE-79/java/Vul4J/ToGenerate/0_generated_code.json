@@ -1,0 +1,28 @@
+{
+  "original_vul_code_lines": "",
+  "renamed_vul_code_lines": "",
+  "restructured_vul_code_lines": "",
+  "renamed_and_restructured_code_lines": "",
+  "line_num_to_be_generated": [5,5,5,5],
+  "original_patch_code": "String encodedUrl = url.replaceAll(\"\\\"\", \"%22\")\n\n\n                    .replaceAll(\"'\", \"%27\")\n\n\n                    .replaceAll(\">\", \"%3E\")\n\n\n                    .replaceAll(\"<\", \"%3C\")\n\n\n                    .replaceAll(\"`\", \"%60\")\n\n\n                    .replaceAll(\" \", \"%20\");\n\n\n            int qMarkIx = encodedUrl.indexOf('?');\n\n\n            if (qMarkIx > 0) {\n\n\n                encodedUrl = encodedUrl.substring(0, qMarkIx) + encodedUrl.substring(qMarkIx).replaceAll(\":\", \"%3A\");\n\n\n            }\n\n\n            encodedUrl = mangleNamespaces(encodedUrl);\n\n\n            if (xssFilter.isValidHref(encodedUrl)) {\n\n\n                return encodedUrl;",
+  "renamed_patch_code": "String convertedResourseAddress = resourseAddress.replaceAll(\"\\\"\", \"%22\")\n                .replaceAll(\"'\", \"%27\")\n                .replaceAll(\">\", \"%3E\")\n                .replaceAll(\"<\", \"%3C\")\n                .replaceAll(\"`\", \"%60\")\n                .replaceAll(\" \", \"%20\");\n        int index = convertedResourseAddress.indexOf('?');\n        if (index > 0) {\n            convertedResourseAddress = convertedResourseAddress.substring(0, index)\n                    + convertedResourseAddress.substring(index).replaceAll(\":\", \"%3A\");\n        }\n        convertedResourseAddress = mutilateTitleScope(convertedResourseAddress);\n        if (xssStrainer.whetherReasonableHref(convertedResourseAddress)) {\n            return convertedResourseAddress;",
+  "restructured_patch_code": "String encodedUrl = url.replaceAll(\"\\\"\", \"%22\")\n\n\n                    .replaceAll(\"'\", \"%27\")\n\n\n                    .replaceAll(\">\", \"%3E\")\n\n\n                    .replaceAll(\"<\", \"%3C\")\n\n\n                    .replaceAll(\"`\", \"%60\")\n\n\n                    .replaceAll(\" \", \"%20\");\n\n\n            int qMarkIx = encodedUrl.indexOf('?');\n\n\n            if (qMarkIx > 0) {\n\n\n                encodedUrl = encodedUrl.substring(0, qMarkIx) + encodedUrl.substring(qMarkIx).replaceAll(\":\", \"%3A\");\n\n\n            }\n\n\n            encodedUrl = mangleNamespaces(encodedUrl);\n\n\n            if (xssFilter.isValidHref(encodedUrl)) {\n\n\n                return encodedUrl;",
+  "renamed_and_restructured_patch_code": "String convertedResourseAddress = resourseAddress.replaceAll(\"\\\"\", \"%22\")\n                .replaceAll(\"'\", \"%27\")\n                .replaceAll(\">\", \"%3E\")\n                .replaceAll(\"<\", \"%3C\")\n                .replaceAll(\"`\", \"%60\")\n                .replaceAll(\" \", \"%20\");\n        int index = convertedResourseAddress.indexOf('?');\n        if (index > 0) {\n            convertedResourseAddress = convertedResourseAddress.substring(0, index)\n                    + convertedResourseAddress.substring(index).replaceAll(\":\", \"%3A\");\n        }\n        convertedResourseAddress = mutilateTitleScope(convertedResourseAddress);\n        if (xssStrainer.whetherReasonableHref(convertedResourseAddress)) {\n            return convertedResourseAddress;",
+  "original_Code_Generated_GitHub_Copilot": "",
+  "original_Code_Generated_CodeGeeX4": "",
+  "original_Code_Generated_StarCoder2": "",
+  "original_Code_Generated_GitHub_Copilot_deepcoder": "",
+  "renamed_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_Code_Generated_by_CodeGeeX4": "",
+  "renamed_Code_Generated_by_StarCoder2": "",
+  "renamed_Code_Generated_by_Deepcoder": "",
+  "restructured_Code_Generated_by_GitHub_Copilot": "",
+  "restructured_Code_Generated_by_CodeGeeX4": "",
+  "restructured_Code_Generated_by_StarCoder2": "",
+  "restructured_Code_Generated_by_Deepcoder": "",
+
+  "renamed_and_restructured_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_and_restructured_Code_Generated_by_CodeGeeX4": "",
+  "renamed_and_restructured_Code_Generated_by_StarCoder2": "",
+  "renamed_and_restructured_Code_Generated_by_Deepcoder": ""
+}

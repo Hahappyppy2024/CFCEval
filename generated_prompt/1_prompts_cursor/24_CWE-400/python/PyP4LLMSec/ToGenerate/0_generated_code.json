@@ -1,0 +1,33 @@
+{
+  "original_vul_code_lines": "",
+  "renamed_vul_code_lines": "",
+  "restructured_vul_code_lines": "",
+  "renamed_and_restructured_code_lines": "",
+
+  "line_num_to_be_generated": [28,28,30],
+  "original_patch_code": "quoteblob = base64.b64decode(quote_tokens[0])\n    sigblob = base64.b64decode(quote_tokens[1])\n    pcrblob = base64.b64decode(quote_tokens[2])\n    if compressed:\n        logger.warning(\"Decompressing quote data which is unsafe!\")\n        quoteblob = zlib.decompress(quoteblob)\n        sigblob = zlib.decompress(sigblob)\n        pcrblob = zlib.decompress(pcrblob)",
+  "renamed_patch_code": "quote_blob = base64.b64decode(quote_parts[0])\n    signature_blob = base64.b64decode(quote_parts[1])\n    pcr_blob = base64.b64decode(quote_parts[2])\n    if is_compressed:\n        logger.warning(\"Decompressing quote data which is unsafe!\")\n        quote_blob = zlib.decompress(quote_blob)\n        signature_blob = zlib.decompress(signature_blob)\n        pcr_blob = zlib.decompress(pcr_blob)",
+  "restructured_patch_code": "    quoteblob = base64.b64decode(quote_tokens[0])\n    sigblob = base64.b64decode(quote_tokens[1])\n    pcrblob = base64.b64decode(quote_tokens[2])\n    if compressed:\n        logger.warning(\"Decompressing quote data which is unsafe!\")\n        quoteblob = zlib.decompress(quoteblob)\n        sigblob = zlib.decompress(sigblob)\n        pcrblob = zlib.decompress(pcrblob)",
+  "renamed_and_restructured_patch_code": "quote_blob = base64.b64decode(quote_parts[0])\n    signature_blob = base64.b64decode(quote_parts[1])\n    pcr_blob = base64.b64decode(quote_parts[2])\n    if is_compressed:\n        logger.warning(\"Decompressing quote data which is unsafe!\")\n        quote_blob = zlib.decompress(quote_blob)\n        signature_blob = zlib.decompress(signature_blob)\n        pcr_blob = zlib.decompress(pcr_blob)",
+
+  "original_Code_Generated_GitHub_Copilot": "",
+  "original_Code_Generated_CodeGeeX4": "",
+  "original_Code_Generated_StarCoder2": "",
+  "original_Code_Generated_GitHub_Copilot_deepcoder": "",
+
+
+  "renamed_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_Code_Generated_by_CodeGeeX4": "",
+  "renamed_Code_Generated_by_StarCoder2": "",
+  "renamed_Code_Generated_by_Deepcoder": "",
+
+  "restructured_Code_Generated_by_GitHub_Copilot": "",
+  "restructured_Code_Generated_by_CodeGeeX4": "",
+  "restructured_Code_Generated_by_StarCoder2": "",
+  "restructured_Code_Generated_by_Deepcoder": "",
+
+  "renamed_and_restructured_Code_Generated_by_GitHub_Copilot": "",
+  "renamed_and_restructured_Code_Generated_by_CodeGeeX4": "",
+  "renamed_and_restructured_Code_Generated_by_StarCoder2": "",
+  "renamed_and_restructured_Code_Generated_by_Deepcoder": ""
+}

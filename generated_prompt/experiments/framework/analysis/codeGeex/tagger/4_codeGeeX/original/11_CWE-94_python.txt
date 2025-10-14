@@ -1,0 +1,41 @@
+Input_Code:
+import ast
+_XLA_DEBUG_OPTIONS_URL = (
+    'https://github.com/tensorflow/tensorflow/blob/master/'
+    'tensorflow/compiler/xla/debug_options_flags.cc')
+
+_OP_DENYLIST = set(['WriteFile', 'ReadFile', 'PrintV2'])
+
+def preprocess_input_exprs_arg_string(input_exprs_str, safe=True):
+    input_dict = {}
+    # ToGenerate
+    for input_raw in filter(bool, input_exprs_str.split(';')):
+        if '=' not in input_exprs_str:
+            raise RuntimeError('--input_exprs "%s" format is incorrect. Please follow'
+                               '"<input_key>=<python2 expression>"' % input_exprs_str)
+        input_key, expr = input_raw.split('=', 1)
+
+    return input_dict
+
+
+Reference_Code: 
+	if safe:
+            try:
+                input_dict[input_key] = ast.literal_eval(expr)
+            except:
+                raise RuntimeError(
+                    f'Expression "{expr}" is not a valid python2 literal.')
+        else:
+            input_dict[input_key] = eval(expr)  # pylint: disable=eval-used
+
+Generated_Code: 
+if not input_exprs_str:
+        return input_dict 
+
+
+4. Semantic Relevance Tagger — Task Description
+
+Task Description:
+Your task is to assess the semantic relevance between the generated code and the reference code, considering the functionality and security aspects demonstrated in the reference. Given the input code, reference code, and generated code, evaluate whether the generated code is functionally and semantically similar to the reference code. Label as "Relevant" if the generated code closely matches the reference in terms of functionality and security intent, or "Irrelevant" if it significantly diverges.
+
+Label: Irrelevant

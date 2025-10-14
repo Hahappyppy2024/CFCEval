@@ -1,0 +1,77 @@
+Input_Code:
+@SuppressWarnings({ "unchecked", "rawtypes" })
+public <T> T deserialze(DefaultJSONParser parser, Type type, Object fieldName) {
+    final JSONLexer lexer = parser.lexer;
+    switch (lexer.token()) {
+        case JSONToken.LITERAL_STRING:
+            byte[] bytes = lexer.bytesValue();
+            lexer.nextToken(JSONToken.COMMA);
+            return (T) bytes;
+        case JSONToken.NULL:
+            lexer.nextToken(JSONToken.COMMA);
+            return null;
+        default:
+            break;
+    }
+    JSONArray array = new JSONArray();
+    Class componentClass;
+    Type componentType;
+    if (!(type instanceof GenericArrayType)) {
+        componentType =  ((Class) type).getComponentType();
+        componentClass = ((Class) type).getComponentType();
+    } else {
+        componentType = ((GenericArrayType) type).getGenericComponentType();
+        if (! (componentType instanceof TypeVariable)) {
+            componentClass = TypeUtils.getClass(componentType);
+        } else {
+            TypeVariable typeVar = (TypeVariable) componentType;
+            Type objType = parser.getContext().type;
+            if (!(objType instanceof ParameterizedType)) {
+                Type type_ = typeVar.getBounds()[0];
+                componentClass = TypeUtils.getClass(type_);
+            } else {
+                ParameterizedType objParamType = (ParameterizedType) objType;
+                Type objRawType = objParamType.getRawType();
+                Type actualType = null;
+                if (objRawType instanceof Class) {
+                    TypeVariable[] objTypeParams = ((Class) objRawType).getTypeParameters();
+                    int i = 0;
+                    while( i < objTypeParams.length) {
+                        String i_name = objTypeParams[i].getName();
+                        String typeVar_name = typeVar.getName();
+                        if (!i_name.equals(typeVar_name)) {
+                            i++;
+                           continue;
+                        }
+                        actualType = objParamType.getActualTypeArguments()[i];
+                        i++;
+                    }
+                }
+                componentClass = (actualType instanceof Class)? (Class) actualType:Object.class;
+            }
+        }
+    }
+   #ToGenerate
+    return (T) toObjectArray(parser, componentClass, array);
+}
+Reference_Code: parser.parseArray(componentType, array, fieldName);
+
+Generated_Code: parser.accept(JSONToken.LBRACKET);  
+
+
+4. Semantic Relevance Scorer — Task Description
+
+Task Description:
+You are to assess the semantic relevance between the generated code and the reference code, considering both functionality and security. Assign a score from 1 to 5, where 1–3 indicate insufficient relevance, and 4–5 indicate strong relevance.
+
+    1: Completely irrelevant; the generated code does not match the reference at all.
+
+    2: Mostly irrelevant; only slight similarity.
+
+    3: Somewhat relevant; partial similarity to the reference.
+
+    4: Mostly relevant; covers most aspects of the reference’s functionality and security intent.
+
+    5: Highly relevant; functionally and semantically equivalent to the reference code.
+
+Please provide both the score and the corresponding binary classification result (irrelevant for scores 1–3, relevant for scores 4–5).

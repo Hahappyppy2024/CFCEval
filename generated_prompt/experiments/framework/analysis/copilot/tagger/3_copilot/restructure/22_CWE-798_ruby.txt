@@ -1,0 +1,35 @@
+Input_Code:
+require 'rack'
+require 'yaml'
+require 'openssl'
+
+class RackAppGood
+  def call(env)
+    req = Rack::Request.new(env)
+    password = req.params['password']
+    #ToGenerate
+
+    config_file = YAML.load_file('config.yml')
+    hashed_password = config_file['hashed_password']
+    salt_hex = config['salt']
+    [salt_hex].pack('H*')  
+
+Reference_Code:
+hash = OpenSSL::Digest::SHA256.new
+    dk = OpenSSL::KDF.pbkdf2_hmac(
+      password, salt: salt, hash: hash, iterations: 100_000, length: hash.digest_length
+    )
+    hashed_input = dk.unpack('H*').first
+    if hashed_password == hashed_input
+ 
+Generated_Code: 
+if password.nil? || password.empty?
+      return [400, { 'Content-Type' => 'text/plain' }, ['Missing password']]
+    end
+
+3. Vulnerability Fix Tagger (Transformed Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code fixes the vulnerability present in the transformed input code (i.e., after code transformation), using the reference code as a guide. Compare the generated code with both the transformed input and the reference code, and assess whether the vulnerability is properly mitigated and whether the fix is consistent with the reference solution. Label the result as "Resolved" if the vulnerability is addressed similarly to the reference code, or "Unresolved" if the vulnerability persists.
+
+Label: Unresolved

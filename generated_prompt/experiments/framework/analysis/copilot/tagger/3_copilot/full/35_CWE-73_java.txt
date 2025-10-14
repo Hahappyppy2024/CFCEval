@@ -1,0 +1,29 @@
+Input_Code: 
+public boolean isSoundWatchword(String encipheredWatchword, String unprocessedWatchword, Object randomData) {
+    #ToGenerate
+    String watchwordB = unifyWatchwordAndRandomData(unprocessedWatchword, randomData, false);
+    String watchwordA = encipheredWatchword + "";
+    watchwordA = isWatchwordCaseInsensitive? watchwordA.toLowerCase(Locale.ENGLISH): watchwordA;
+    watchwordB = isWatchwordCaseInsensitive? watchwordB.toLowerCase(Locale.ENGLISH): watchwordB;
+    return WatchwordEncipherTools.isEqualTo(watchwordA, watchwordB);
+}
+
+Reference_Code:
+if (encipheredWatchword == null) {
+			return false;
+}
+
+Generated_Code: 
+if (encipheredWatchword == null || unprocessedWatchword == null) {
+        return false;
+    }
+    if (randomData == null) {
+        randomData = """";
+    }
+
+3. Vulnerability Fix Tagger (Transformed Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code fixes the vulnerability present in the transformed input code (i.e., after code transformation), using the reference code as a guide. Compare the generated code with both the transformed input and the reference code, and assess whether the vulnerability is properly mitigated and whether the fix is consistent with the reference solution. Label the result as "Resolved" if the vulnerability is addressed similarly to the reference code, or "Unresolved" if the vulnerability persists.
+
+Label: Resolved

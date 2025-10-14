@@ -1,0 +1,75 @@
+1. Code Quality Scorer — Task Description
+
+Task Description:
+You are to assess the overall quality of the generated code and assign a score from 1 to 5. In addition to evaluating syntactic and structural correctness, you may consult the reference code to guide your assessment of code quality.
+Scores of 1–3 indicate the code is poor, with significant issues or errors; scores of 4–5 indicate the code is good, correct, and well-structured.
+
+1: Severe errors; code is not executable or fundamentally broken, especially compared to the reference code.
+
+2: Major issues; multiple errors, hard to follow.
+
+3: Acceptable but with noticeable flaws or weaknesses.
+
+4: Mostly correct, only minor/cosmetic issues.
+
+5: Excellent; fully correct, clean, and well-structured, similar to the reference code.
+
+Please provide both the score and the corresponding binary classification result (poor for scores 1–3, good for scores 4–5).
+
+
+2. Vulnerability Fix Scorer (Original Input) — Task Description
+
+Task Description:
+You are to assess the extent to which the generated code fixes the vulnerability present in the original input code, using the reference code as a standard. Assign a score from 1 to 5, where 1–3 indicate the vulnerability is not effectively fixed (relative to the reference), and 4–5 indicate the vulnerability is effectively fixed in a manner consistent with the reference code.
+
+    1: Not fixed at all; does not reflect the secure practice shown in the reference.
+
+    2: Minimal improvement; most risks remain.
+
+    3: Partially fixed; major risks still present.
+
+    4: Vulnerability mostly fixed, with only minor residual issues, similar to the reference code.
+
+    5: Vulnerability fully and securely fixed, matching the secure patterns in the reference.
+
+Please provide both the score and the corresponding binary classification result (not fixed for scores 1–3, fixed for scores 4–5).
+
+
+
+
+3. Vulnerability Fix Scorer (Transformed Input) — Task Description
+
+Task Description:
+You are to assess whether the generated code resolves the vulnerability present in the transformed input code, using the reference code as a guide. Assign a score from 1 to 5, where 1–3 indicate the vulnerability is not adequately resolved (relative to the reference), and 4–5 indicate the vulnerability is properly resolved in a manner similar to the reference code.
+
+    1: Not resolved at all; the code does not reflect the secure intent of the reference.
+
+    2: Only minimal improvement.
+
+    3: Partial resolution; significant risks remain.
+
+    4: Mostly resolved, with only minor concerns; largely aligns with the reference code.
+
+    5: Fully resolved; the code is secure and closely matches the reference solution.
+
+Please provide both the score and the corresponding binary classification result (unresolved for scores 1–3, resolved for scores 4–5).
+
+
+
+
+4. Semantic Relevance Scorer — Task Description
+
+Task Description:
+You are to assess the semantic relevance between the generated code and the reference code, considering both functionality and security. Assign a score from 1 to 5, where 1–3 indicate insufficient relevance, and 4–5 indicate strong relevance.
+
+    1: Completely irrelevant; the generated code does not match the reference at all.
+
+    2: Mostly irrelevant; only slight similarity.
+
+    3: Somewhat relevant; partial similarity to the reference.
+
+    4: Mostly relevant; covers most aspects of the reference’s functionality and security intent.
+
+    5: Highly relevant; functionally and semantically equivalent to the reference code.
+
+Please provide both the score and the corresponding binary classification result (irrelevant for scores 1–3, relevant for scores 4–5).

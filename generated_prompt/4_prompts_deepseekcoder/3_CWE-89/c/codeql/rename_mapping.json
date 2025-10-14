@@ -1,0 +1,7 @@
+{
+  "main": "handleUserQuery",
+  "userName": "inputUserName",
+  "userNameSql": "escapedUserName",
+  "query2": "sqlQuery",
+  "query1": "sqlQuery"
+}

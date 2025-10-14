@@ -1,0 +1,55 @@
+Input_Code: 
+
+from urllib.parse import urlunparse, urlparse, quote
+from jupyter_server.utils import ensure_async, url_path_join
+def get_client_uri(self, protocol, host, port, proxied_path):
+    if not self.absolute_url:
+        client_path = proxied_path
+    else:
+        context_path = self._get_context_path(host, port)
+        client_path = url_path_join(context_path, proxied_path)
+    #ToGenerate
+
+    client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri
+
+Reference_Code: 
+
+ if not client_path.startswith("/"):
+        client_path = "/" + client_path
+
+Generated_Code: 
+	client_path = urlunparse(urlparse(client_path))
+    if self.request.query:
+        client_path += '?' + self.request.query
+    if self.request.headers.get('X-Forwarded-Proto'):
+        protocol = self.request.headers['X-Forwarded-Proto'] 
+
+
+4. Semantic Relevance Scorer — Task Description
+
+Task Description:
+You are to assess the semantic relevance between the generated code and the reference code, considering both functionality and security. Assign a score from 1 to 5, where 1–3 indicate insufficient relevance, and 4–5 indicate strong relevance.
+
+    1: Completely irrelevant; the generated code does not match the reference at all.
+
+    2: Mostly irrelevant; only slight similarity.
+
+    3: Somewhat relevant; partial similarity to the reference.
+
+    4: Mostly relevant; covers most aspects of the reference’s functionality and security intent.
+
+    5: Highly relevant; functionally and semantically equivalent to the reference code.
+
+Please provide both the score and the corresponding binary classification result (irrelevant for scores 1–3, relevant for scores 4–5).
+
+Score: 2
+Classification: irrelevant

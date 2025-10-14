@@ -1,0 +1,25 @@
+Input_Code: 
+@Override
+public String toString() {
+    StringBuilder s = new StringBuilder();
+    if (source != null) {
+        s.append("remoteAddress=").append(source);
+    }
+    if (customerIdentification != null) {
+        if (s.length() > 0) {
+            s.append(", ");
+        }
+        s.append("clientId=").append(customerIdentification);
+    }
+    #ToGenerate
+}
+Reference_Code: return s.toString(); 
+Generated_Code: return s.toString();  
+
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Fixed

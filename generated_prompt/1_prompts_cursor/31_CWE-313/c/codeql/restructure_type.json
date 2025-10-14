@@ -1,0 +1,11 @@
+{
+  'If-condition flipping': "",
+  'Loop transformation':"",
+  'Conditional-statement transformation': "",
+  'Function chaining': "",
+  'Function-argument passing':"" ,
+  'Code-order change': {
+    "Original": "  sqlite3 *credentialsDB;\n  sqlite3_stmt *stmt;\n",
+    "ChangeTo": "  sqlite3_stmt *stmt;\n  sqlite3 *credentialsDB;"，
+  }
+}

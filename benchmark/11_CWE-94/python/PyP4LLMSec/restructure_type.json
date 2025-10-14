@@ -1,0 +1,12 @@
+{
+  'If-condition flipping': "",
+  'Loop transformation':"",
+  'Conditional-statement transformation': "",
+  'Function chaining': "",
+  'Function-argument passing':"",
+  'Code-order change':
+    {
+    "Original": "_XLA_DEBUG_OPTIONS_URL = (\n    'https://github.com/tensorflow/tensorflow/blob/master/'\n    'tensorflow/compiler/xla/debug_options_flags.cc')\n\n\n# Set of ops to denylist.\n_OP_DENYLIST = set(['WriteFile', 'ReadFile', 'PrintV2'])\n",
+    "ChangeTo": "# Set of ops to denylist.\n_OP_DENYLIST = set(['WriteFile', 'ReadFile', 'PrintV2'])\n\n\n_XLA_DEBUG_OPTIONS_URL = (\n    'https://github.com/tensorflow/tensorflow/blob/master/'\n    'tensorflow/compiler/xla/debug_options_flags.cc')"
+  }
+}

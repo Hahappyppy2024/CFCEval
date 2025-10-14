@@ -1,0 +1,6 @@
+{
+  "index": "redirect_if_allowed_host",
+  "url": "requested_url",
+  "host": "requested_host",
+  "allowedHosts": "allowed_hosts"
+}

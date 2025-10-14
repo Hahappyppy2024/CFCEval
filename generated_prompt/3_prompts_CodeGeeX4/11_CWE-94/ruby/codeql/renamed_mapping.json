@@ -1,0 +1,5 @@
+{
+  "define_getter_class": "create_class_with_getter",
+  "getter_name": "method_name",
+  "val": "return_value"
+}

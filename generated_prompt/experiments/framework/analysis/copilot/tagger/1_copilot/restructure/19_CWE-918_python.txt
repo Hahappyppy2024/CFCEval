@@ -1,0 +1,46 @@
+Input_Code: 
+
+from urllib.parse import urlunparse, urlparse, quote
+from jupyter_server.utils import ensure_async, url_path_join
+def get_client_uri(self, protocol, host, port, proxied_path):
+    if not self.absolute_url:
+        client_path = proxied_path
+    else:
+        context_path = self._get_context_path(host, port)
+        client_path = url_path_join(context_path, proxied_path)
+    #ToGenerate
+
+    client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri
+
+Reference_Code: 
+
+ if not client_path.startswith("/"):
+        client_path = "/" + client_path
+
+Generated_Code: 
+client_path = quote(client_path, safe=":/?#[]@!$&'()*+,;=-._~")
+    client_uri = '{protocol}://{host}:{port}{path}'.format(
+        protocol=protocol,
+        host=host,
+        port=port,
+        path=client_path,
+    )
+    if self.request.query:
+        client_uri += '?' + self.request.query
+    return client_uri 
+
+1. Code Quality Tagger — Task Description
+
+Task Description:
+Your task is to evaluate the overall quality of the generated code. Examine whether the generated code contains any syntactic or structural errors, such as invalid syntax, incomplete statements, or improper code structure. You may also consult the reference code for comparison if needed. Label the generated code as "Good" if it is free from such errors, or "Poor" if it contains any syntactic or structural mistakes.
+
+Label: Poor

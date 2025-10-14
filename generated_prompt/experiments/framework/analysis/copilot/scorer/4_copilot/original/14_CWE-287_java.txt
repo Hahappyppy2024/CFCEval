@@ -1,0 +1,69 @@
+Input_Code:
+
+public boolean isAllowed(HttpServletRequest request) throws IOException {
+    String requestBody = IOUtils.toString(request.getReader());
+    ScimUser scimUserFromRequest = JsonUtils.readValue(requestBody, ScimUser.class);
+    String id = UaaUrlUtils.extractPathVariableFromUrl(USER_ID_PATH_PARAMETER_INDEX, UaaUrlUtils.getRequestPath(request));
+    String zoneId = IdentityZoneHolder.get().getId();
+    ScimUser scimUserFromDb;
+    try {
+        scimUserFromDb = scimUserProvisioning.retrieve(id, zoneId);
+    } catch (ScimResourceNotFoundException e) {
+        return true;
+    }
+    if (!scimUserFromDb.getPrimaryEmail().equals(scimUserFromRequest.getPrimaryEmail())) {
+        return false;
+    }
+    # To Generate
+    if (!scimUserFromDb.getUserName().equals(scimUserFromRequest.getUserName())) {
+        return false;
+    }
+    if (scimUserFromDb.isVerified() != scimUserFromRequest.isVerified()) {
+        return false;
+    }
+    if (scimUserFromDb.isActive() != (scimUserFromRequest.isActive())) {
+        return false;
+    }
+    if (!scimUserFromDb.getOrigin().equals(scimUserFromRequest.getOrigin())) {
+        return false;
+    }
+    return true;
+}
+
+  
+Reference_Code:
+if (!scimUserFromDb.getEmails().containsAll(scimUserFromRequest.getEmails())) {
+            return false;
+        }
+
+Generated_Code: 
+if (scimUserFromDb.getExternalId() == null && scimUserFromRequest.getExternalId() == null) {
+        // Both external IDs are null, continue checking other fields
+    } else if (scimUserFromDb.getExternalId() != null && scimUserFromRequest.getExternalId() != null) {
+        if (!scimUserFromDb.getExternalId().equals(scimUserFromRequest.getExternalId())) {
+            return false;
+        }
+    } else {
+        return false; // One is null and the other is not
+    }
+ 
+
+4. Semantic Relevance Scorer — Task Description
+
+Task Description:
+You are to assess the semantic relevance between the generated code and the reference code, considering both functionality and security. Assign a score from 1 to 5, where 1–3 indicate insufficient relevance, and 4–5 indicate strong relevance.
+
+    1: Completely irrelevant; the generated code does not match the reference at all.
+
+    2: Mostly irrelevant; only slight similarity.
+
+    3: Somewhat relevant; partial similarity to the reference.
+
+    4: Mostly relevant; covers most aspects of the reference’s functionality and security intent.
+
+    5: Highly relevant; functionally and semantically equivalent to the reference code.
+
+Please provide both the score and the corresponding binary classification result (irrelevant for scores 1–3, relevant for scores 4–5).
+
+Score: 4
+Classification: Relevant

@@ -1,0 +1,6 @@
+{
+  "example2": "get_int_at_offset",
+  "i": "offset",
+  "intArray": "values",
+  "intPointer": "values_ptr"
+}

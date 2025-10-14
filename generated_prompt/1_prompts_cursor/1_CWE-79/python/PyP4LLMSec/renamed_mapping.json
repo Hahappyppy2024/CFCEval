@@ -1,0 +1,6 @@
+{
+  "LOGGER": "log",
+  "validate_absolute_path": "validate_media_file_path",
+  "root": "media_root_dir",
+  "absolute_path": "media_abs_path"
+}

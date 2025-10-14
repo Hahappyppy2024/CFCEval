@@ -1,0 +1,29 @@
+Input_Code: 
+#include <string>
+void work(const char*);
+void work_with_combined_string(std::string s1, std::string s2) {
+#ToGenerate
+}
+ 
+Reference_Code: 
+	auto combined_string = s1 + s2;
+ 	work(combined_string.c_str());  
+
+Generated_Code: 
+// This function is intended to combine two strings and pass them to work.
+    // However, it does not handle the case where the combined string exceeds
+    // the maximum length allowed by work.
+    
+    // Combine the two strings
+    std::string combined = s1 + s2;
+    
+    // Call work with the combined string
+    work(combined.c_str());
+
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Fixed

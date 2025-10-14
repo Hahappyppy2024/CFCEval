@@ -1,0 +1,6 @@
+{
+  "i": "random_base_unsafe",
+  "j": "overflow_result",
+  "n": "random_base_safe",
+  "k": "guarded_result"
+}

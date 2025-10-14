@@ -1,0 +1,24 @@
+Input_Code: 
+void good_server() {
+  char* query = getenv("QUERY_STRING");
+  puts("<p>Query results for ");
+#To Generate
+  puts("\n<p>\n");
+  puts(do_search(query));
+
+Reference_Code: 
+  char* query_escaped = escape_html(query);
+  puts(query_escaped);
+  free(query_escaped);
+
+
+Generated_Code:
+if not input_exprs_str:
+        return input_dict
+
+2. Vulnerability Fix Tagger (Original Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code successfully fixes the vulnerability present in the original input code, with reference to the provided reference code. Compare the generated code with both the original input and the reference code, and assess if the generated code follows the secure patterns demonstrated in the reference. Label the result as "Fixed" if the vulnerability is resolved in a manner similar to the reference code, or "Not Fixed" if the issue remains or is insufficiently addressed.
+
+Label: Not Fixed

@@ -1,0 +1,5 @@
+{
+  "good_server": "handle_search_request",
+  "query": "raw_query_string",
+  "query_escaped": "sanitized_query_string"
+}

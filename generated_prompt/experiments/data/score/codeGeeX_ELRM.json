@@ -1,0 +1,598 @@
+{
+    "ORIGINAL_11_CWE-94_python": {
+        "ELRM": 0.039247220202775615,
+        "ngram_blue_score": 0.05372849659117709,
+        "weighted_ngram_match_score": 0.007716104999488697,
+        "Keywords_Ops_match_score": 0.09554427922043669,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_11_CWE-94_ruby": {
+        "ELRM": 0.04835905002437496,
+        "ngram_blue_score": 0.06704226838163331,
+        "weighted_ngram_match_score": 0.06865890479690394,
+        "Keywords_Ops_match_score": 0.05773502691896258,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_12_CWE-20_java": {
+        "ELRM": 0.029580671559373658,
+        "ngram_blue_score": 0.026658376817028855,
+        "weighted_ngram_match_score": 0.026658376817028866,
+        "Keywords_Ops_match_score": 0.06500593260343691,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_12_CWE-20_java2": 0,
+    "ORIGINAL_12_CWE-20_ruby": 0,
+    "ORIGINAL_14_CWE-287_java": {
+        "ELRM": 0.5597719014884392,
+        "ngram_blue_score": 0.6166025991004304,
+        "weighted_ngram_match_score": 0.6224850068533267,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_14_CWE-287_python": {
+        "ELRM": 0.06935786641338373,
+        "ngram_blue_score": 0.07730551756939454,
+        "weighted_ngram_match_score": 0.06500593260343691,
+        "Keywords_Ops_match_score": 0.13512001548070346,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_15_CWE-269_python": {
+        "ELRM": 0.1519053756223401,
+        "ngram_blue_score": 0.1135935489027116,
+        "weighted_ngram_match_score": 0.42728700639623407,
+        "Keywords_Ops_match_score": 0.06674094719041482,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_16_CWE-502_ruby": 0,
+    "ORIGINAL_17_CWE-200_java": {
+        "ELRM": 0.7046826882694954,
+        "ngram_blue_score": 1.0,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 0.8187307530779819,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_19_CWE-918_python": {
+        "ELRM": 0.027821188775439164,
+        "ngram_blue_score": 0.032709344708772174,
+        "weighted_ngram_match_score": 0.03929394530293317,
+        "Keywords_Ops_match_score": 0.039281465090051315,
+        "String_Literal_Similarity_": 0.0
+    },
+    "ORIGINAL_1_CWE-79_c": {
+        "ELRM": 0.36654456382724865,
+        "ngram_blue_score": 0.7598356856515925,
+        "weighted_ngram_match_score": 0.14400124446705304,
+        "Keywords_Ops_match_score": 0.5623413251903491,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_1_CWE-79_java": {
+        "ELRM": 0.20211365279764543,
+        "ngram_blue_score": 0.1387649435650926,
+        "weighted_ngram_match_score": 0.04098909781502583,
+        "Keywords_Ops_match_score": 0.5623413251903491,
+        "String_Literal_Similarity_": 0.06635924462011417
+    },
+    "ORIGINAL_1_CWE-79_python": {
+        "ELRM": 0.8266788340786412,
+        "ngram_blue_score": 0.8070557274927981,
+        "weighted_ngram_match_score": 0.8123831171974492,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0.6872764916243176
+    },
+    "ORIGINAL_22_CWE-798_ruby": {
+        "ELRM": 0.009634762802682845,
+        "ngram_blue_score": 0.009444898173424886,
+        "weighted_ngram_match_score": 0.006437432128504509,
+        "Keywords_Ops_match_score": 0.02265672090880199,
+        "String_Literal_Similarity_": 0.0
+    },
+    "ORIGINAL_23_CWE-190_c": {
+        "ELRM": 0.029029595982951087,
+        "ngram_blue_score": 0.03575297164449809,
+        "weighted_ngram_match_score": 0.03507165057936743,
+        "Keywords_Ops_match_score": 0.045293761707938834,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_24_CWE-400_python": {
+        "ELRM": 0.4816740556005993,
+        "ngram_blue_score": 0.6488462513318105,
+        "weighted_ngram_match_score": 0.42261324043790033,
+        "Keywords_Ops_match_score": 0.8552367306326863,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_26_CWE-835_java": {
+        "ELRM": 0.031086652150376155,
+        "ngram_blue_score": 0.0428361950754725,
+        "weighted_ngram_match_score": 0.028433291815307685,
+        "Keywords_Ops_match_score": 0.05307712171072445,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_27_CWE-611_java": {
+        "ELRM": 0.6008439695638685,
+        "ngram_blue_score": 0.7016879391277372,
+        "weighted_ngram_match_score": 0.7016879391277372,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_28_CWE-310_java": {
+        "ELRM": 0.3364339275344678,
+        "ngram_blue_score": 0.4394110961620203,
+        "weighted_ngram_match_score": 0.4463742317179623,
+        "Keywords_Ops_match_score": 0.4599503822578888,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_30_CWE-1333_ruby": {
+        "ELRM": 0.1207089660216478,
+        "ngram_blue_score": 0.039281465090051315,
+        "weighted_ngram_match_score": 0.01626739260030573,
+        "Keywords_Ops_match_score": 0.4272870063962341,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_31_CWE-313_c": {
+        "ELRM": 0.06590485978843875,
+        "ngram_blue_score": 0.04740604259878138,
+        "weighted_ngram_match_score": 0.01064658810471376,
+        "Keywords_Ops_match_score": 0.20556680845025987,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_32_CWE-468_c": {
+        "ELRM": 0.02355688632353213,
+        "ngram_blue_score": 0.025098621243978974,
+        "weighted_ngram_match_score": 0.029847458960098227,
+        "Keywords_Ops_match_score": 0.039281465090051315,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_33_CWE-332_java": {
+        "ELRM": 0.0,
+        "ngram_blue_score": 0,
+        "weighted_ngram_match_score": 0,
+        "Keywords_Ops_match_score": 0,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_34_CWE-284_java": {
+        "ELRM": 0.36022760409938404,
+        "ngram_blue_score": 0.5623413251903491,
+        "weighted_ngram_match_score": 0.5623413251903491,
+        "Keywords_Ops_match_score": 0.316227766016838,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_35_CWE-73_java": {
+        "ELRM": 0.0114419442736565,
+        "ngram_blue_score": 0.007939087147543497,
+        "weighted_ngram_match_score": 0.02164007638135428,
+        "Keywords_Ops_match_score": 0.01618861356572822,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_3_CWE-89_c": {
+        "ELRM": 0.5968236793829784,
+        "ngram_blue_score": 0.9048374180359595,
+        "weighted_ngram_match_score": 0.48245729949595395,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_3_CWE-89_ruby": 0,
+    "ORIGINAL_4_CWE-352_python": {
+        "ELRM": 0.09716889569151282,
+        "ngram_blue_score": 0.11362193664674995,
+        "weighted_ngram_match_score": 0.03477250470582592,
+        "Keywords_Ops_match_score": 0.24028114141347542,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_5_CWE-22_java": {
+        "ELRM": 0.07136408053011403,
+        "ngram_blue_score": 0.0439891724758422,
+        "weighted_ngram_match_score": 0.09193227152249185,
+        "Keywords_Ops_match_score": 0.1495348781221221,
+        "String_Literal_Similarity_": 0
+    },
+    "ORIGINAL_7_CWE-78_ruby": 0,
+    "ORIGINAL_8_CWE-416_c": {
+        "ELRM": 0.09975943434677384,
+        "ngram_blue_score": 0.1744391898986843,
+        "weighted_ngram_match_score": 0.08947853200770763,
+        "Keywords_Ops_match_score": 0.13512001548070346,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_11_CWE-94_python": 0,
+    "RENAME_11_CWE-94_ruby": {
+        "ELRM": 0.40004450395648933,
+        "ngram_blue_score": 0.5133450480401704,
+        "weighted_ngram_match_score": 0.4180926628093648,
+        "Keywords_Ops_match_score": 0.668740304976422,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_12_CWE-20_java": {
+        "ELRM": 0.02900152309675432,
+        "ngram_blue_score": 0.02434178296655151,
+        "weighted_ngram_match_score": 0.026658376817028866,
+        "Keywords_Ops_match_score": 0.06500593260343691,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_12_CWE-20_java2": 0,
+    "RENAME_12_CWE-20_ruby": 0,
+    "RENAME_14_CWE-287_java": {
+        "ELRM": 0.5597719014884392,
+        "ngram_blue_score": 0.6166025991004304,
+        "weighted_ngram_match_score": 0.6224850068533267,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_14_CWE-287_python": 0,
+    "RENAME_15_CWE-269_python": {
+        "ELRM": 0.12641553836008246,
+        "ngram_blue_score": 0.10798033448421628,
+        "weighted_ngram_match_score": 0.3021375397356768,
+        "Keywords_Ops_match_score": 0.09554427922043669,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_16_CWE-502_ruby": 0,
+    "RENAME_17_CWE-200_java": {
+        "ELRM": 0.7046826882694954,
+        "ngram_blue_score": 1.0,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 0.8187307530779819,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_19_CWE-918_python": {
+        "ELRM": 0.0814907262436596,
+        "ngram_blue_score": 0.023103257620595934,
+        "weighted_ngram_match_score": 0.04913270548144422,
+        "Keywords_Ops_match_score": 0.18207052811092134,
+        "String_Literal_Similarity_": 0.07165641376167693
+    },
+    "RENAME_1_CWE-79_c": {
+        "ELRM": 0.36654456382724865,
+        "ngram_blue_score": 0.7598356856515925,
+        "weighted_ngram_match_score": 0.14400124446705304,
+        "Keywords_Ops_match_score": 0.5623413251903491,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_1_CWE-79_java": {
+        "ELRM": 0.16619064320961585,
+        "ngram_blue_score": 0.15094258117090345,
+        "weighted_ngram_match_score": 0.04536189345671703,
+        "Keywords_Ops_match_score": 0.4684580982108429,
+        "String_Literal_Similarity_": 0.0
+    },
+    "RENAME_1_CWE-79_python": {
+        "ELRM": 0.5796665097720899,
+        "ngram_blue_score": 0.6652049901111008,
+        "weighted_ngram_match_score": 0.8123831171974492,
+        "Keywords_Ops_match_score": 0.6434588841607617,
+        "String_Literal_Similarity_": 0.19761904761904767
+    },
+    "RENAME_22_CWE-798_ruby": {
+        "ELRM": 0.24294168415258088,
+        "ngram_blue_score": 0.24510628613969887,
+        "weighted_ngram_match_score": 0.27682228377332574,
+        "Keywords_Ops_match_score": 0.3642077792766302,
+        "String_Literal_Similarity_": 0.08563038742066875
+    },
+    "RENAME_23_CWE-190_c": {
+        "ELRM": 0.07095940660543416,
+        "ngram_blue_score": 0.1277566936460511,
+        "weighted_ngram_match_score": 0.0923137758377114,
+        "Keywords_Ops_match_score": 0.06376715693797415,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_24_CWE-400_python": {
+        "ELRM": 0.11794167196408081,
+        "ngram_blue_score": 0.024088562704853513,
+        "weighted_ngram_match_score": 0.0038426605148059374,
+        "Keywords_Ops_match_score": 0.11362193664674995,
+        "String_Literal_Similarity_": 0.3302135279899138
+    },
+    "RENAME_26_CWE-835_java": {
+        "ELRM": 0.031086652150376155,
+        "ngram_blue_score": 0.0428361950754725,
+        "weighted_ngram_match_score": 0.028433291815307685,
+        "Keywords_Ops_match_score": 0.05307712171072445,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_27_CWE-611_java": {
+        "ELRM": 0.6008439695638685,
+        "ngram_blue_score": 0.7016879391277372,
+        "weighted_ngram_match_score": 0.7016879391277372,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_28_CWE-310_java": 0,
+    "RENAME_30_CWE-1333_ruby": {
+        "ELRM": 0.05413480293081759,
+        "ngram_blue_score": 0.05314049749131566,
+        "weighted_ngram_match_score": 0.07036147891341805,
+        "Keywords_Ops_match_score": 0.09303723531853667,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_31_CWE-313_c": 0,
+    "RENAME_32_CWE-468_c": {
+        "ELRM": 0.75,
+        "ngram_blue_score": 1.0,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_33_CWE-332_java": {
+        "ELRM": 0.0,
+        "ngram_blue_score": 0,
+        "weighted_ngram_match_score": 0,
+        "Keywords_Ops_match_score": 0,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_34_CWE-284_java": {
+        "ELRM": 0.14880739051712602,
+        "ngram_blue_score": 0.13512001548070346,
+        "weighted_ngram_match_score": 0.1438817805709626,
+        "Keywords_Ops_match_score": 0.316227766016838,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_35_CWE-73_java": {
+        "ELRM": 0.0,
+        "ngram_blue_score": 0,
+        "weighted_ngram_match_score": 0,
+        "Keywords_Ops_match_score": 0,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_3_CWE-89_c": {
+        "ELRM": 0.5558188800444179,
+        "ngram_blue_score": 0.7408182206817179,
+        "weighted_ngram_match_score": 0.48245729949595395,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RENAME_3_CWE-89_ruby": 0,
+    "RENAME_4_CWE-352_python": {
+        "ELRM": 0.8526620567799934,
+        "ngram_blue_score": 0.7016879391277372,
+        "weighted_ngram_match_score": 0.7089602879922363,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 1.0
+    },
+    "RENAME_5_CWE-22_java": 0,
+    "RENAME_7_CWE-78_ruby": 0,
+    "RENAME_8_CWE-416_c": {
+        "ELRM": 0.13295280597221135,
+        "ngram_blue_score": 0.24028114141347542,
+        "weighted_ngram_match_score": 0.08947853200770763,
+        "Keywords_Ops_match_score": 0.20205155046766235,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_11_CWE-94_python": 0,
+    "RESTRUCTURE_11_CWE-94_ruby": 0,
+    "RESTRUCTURE_12_CWE-20_java": {
+        "ELRM": 0.07403199581393632,
+        "ngram_blue_score": 0.07583235673413397,
+        "weighted_ngram_match_score": 0.059609942732681,
+        "Keywords_Ops_match_score": 0.16068568378893033,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_12_CWE-20_java2": 0,
+    "RESTRUCTURE_12_CWE-20_ruby": 0,
+    "RESTRUCTURE_14_CWE-287_java": {
+        "ELRM": 0.7046826882694954,
+        "ngram_blue_score": 0.8187307530779819,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_14_CWE-287_python": 0,
+    "RESTRUCTURE_15_CWE-269_python": 0,
+    "RESTRUCTURE_16_CWE-502_ruby": 0,
+    "RESTRUCTURE_17_CWE-200_java": {
+        "ELRM": 0.7046826882694954,
+        "ngram_blue_score": 1.0,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 0.8187307530779819,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_19_CWE-918_python": {
+        "ELRM": 0.03643816795373586,
+        "ngram_blue_score": 0.036787632499277766,
+        "weighted_ngram_match_score": 0.04222409212525087,
+        "Keywords_Ops_match_score": 0.06674094719041482,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_1_CWE-79_c": {
+        "ELRM": 0.30128680135549074,
+        "ngram_blue_score": 0.7598356856515925,
+        "weighted_ngram_match_score": 0.0423763530419281,
+        "Keywords_Ops_match_score": 0.40293516672844226,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_1_CWE-79_java": {
+        "ELRM": 0.11345685256961033,
+        "ngram_blue_score": 0.13512001548070346,
+        "weighted_ngram_match_score": 0.0024796287808998584,
+        "Keywords_Ops_match_score": 0.316227766016838,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_1_CWE-79_python": {
+        "ELRM": 0.6548597111725618,
+        "ngram_blue_score": 0.8070557274927981,
+        "weighted_ngram_match_score": 0.8123831171974492,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_22_CWE-798_ruby": {
+        "ELRM": 0.19058760961449123,
+        "ngram_blue_score": 0.21928478174978597,
+        "weighted_ngram_match_score": 0.22354472784871876,
+        "Keywords_Ops_match_score": 0.25387990321843446,
+        "String_Literal_Similarity_": 0.06564102564102565
+    },
+    "RESTRUCTURE_23_CWE-190_c": 0,
+    "RESTRUCTURE_24_CWE-400_python": {
+        "ELRM": 0.35598261662893094,
+        "ngram_blue_score": 0.3634231173335286,
+        "weighted_ngram_match_score": 0.2636955622237726,
+        "Keywords_Ops_match_score": 0.4191444765609785,
+        "String_Literal_Similarity_": 0.37766731039744417
+    },
+    "RESTRUCTURE_26_CWE-835_java": {
+        "ELRM": 0.17137615293191918,
+        "ngram_blue_score": 0.30130404892785684,
+        "weighted_ngram_match_score": 0.2059252523718574,
+        "Keywords_Ops_match_score": 0.17827531042796255,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_27_CWE-611_java": {
+        "ELRM": 0.6008439695638685,
+        "ngram_blue_score": 0.7016879391277372,
+        "weighted_ngram_match_score": 0.7016879391277372,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_28_CWE-310_java": {
+        "ELRM": 0.07727821931807306,
+        "ngram_blue_score": 0.08991396351259592,
+        "weighted_ngram_match_score": 0.07969094408040499,
+        "Keywords_Ops_match_score": 0.13950796967929135,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_30_CWE-1333_ruby": 0,
+    "RESTRUCTURE_31_CWE-313_c": 0,
+    "RESTRUCTURE_32_CWE-468_c": 0,
+    "RESTRUCTURE_33_CWE-332_java": {
+        "ELRM": 0.0,
+        "ngram_blue_score": 0,
+        "weighted_ngram_match_score": 0,
+        "Keywords_Ops_match_score": 0,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_34_CWE-284_java": {
+        "ELRM": 0.36022760409938404,
+        "ngram_blue_score": 0.5623413251903491,
+        "weighted_ngram_match_score": 0.5623413251903491,
+        "Keywords_Ops_match_score": 0.316227766016838,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_35_CWE-73_java": {
+        "ELRM": 0.5054512891841002,
+        "ngram_blue_score": 0.6115380576901023,
+        "weighted_ngram_match_score": 0.749634235443537,
+        "Keywords_Ops_match_score": 0.6606328636027614,
+        "String_Literal_Similarity_": 0
+    },
+    "RESTRUCTURE_3_CWE-89_c": 0,
+    "RESTRUCTURE_3_CWE-89_ruby": 0,
+    "RESTRUCTURE_4_CWE-352_python": 0,
+    "RESTRUCTURE_5_CWE-22_java": {
+        "ELRM": 0.23983916575942757,
+        "ngram_blue_score": 0.13512001548070346,
+        "weighted_ngram_match_score": 0.1438817805709626,
+        "Keywords_Ops_match_score": 0.316227766016838,
+        "String_Literal_Similarity_": 0.3641271009692062
+    },
+    "RESTRUCTURE_7_CWE-78_ruby": 0,
+    "RESTRUCTURE_8_CWE-416_c": 0,
+    "FULL_GENERATION_11_CWE-94_python": {
+        "ELRM": 0.1832827996972833,
+        "ngram_blue_score": 0.12209471671615688,
+        "weighted_ngram_match_score": 0.01418718119818104,
+        "Keywords_Ops_match_score": 0.5623413251903491,
+        "String_Literal_Similarity_": 0.03450797568444629
+    },
+    "FULL_GENERATION_11_CWE-94_ruby": 0,
+    "FULL_GENERATION_12_CWE-20_java": 0,
+    "FULL_GENERATION_12_CWE-20_java2": 0,
+    "FULL_GENERATION_12_CWE-20_ruby": 0,
+    "FULL_GENERATION_14_CWE-287_java": {
+        "ELRM": 0.7046826882694954,
+        "ngram_blue_score": 0.8187307530779819,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_14_CWE-287_python": {
+        "ELRM": 0.05223393835181457,
+        "ngram_blue_score": 0.06985342056580097,
+        "weighted_ngram_match_score": 0.05873949094699214,
+        "Keywords_Ops_match_score": 0.08034284189446518,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_15_CWE-269_python": 0,
+    "FULL_GENERATION_16_CWE-502_ruby": 0,
+    "FULL_GENERATION_17_CWE-200_java": {
+        "ELRM": 0.7046826882694954,
+        "ngram_blue_score": 1.0,
+        "weighted_ngram_match_score": 1.0,
+        "Keywords_Ops_match_score": 0.8187307530779819,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_19_CWE-918_python": {
+        "ELRM": 0.04057309035860449,
+        "ngram_blue_score": 0.1495348781221221,
+        "weighted_ngram_match_score": 0.012757483312295868,
+        "Keywords_Ops_match_score": 0,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_1_CWE-79_c": 0,
+    "FULL_GENERATION_1_CWE-79_java": {
+        "ELRM": 0.11345685256961033,
+        "ngram_blue_score": 0.13512001548070346,
+        "weighted_ngram_match_score": 0.0024796287808998584,
+        "Keywords_Ops_match_score": 0.316227766016838,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_1_CWE-79_python": 0,
+    "FULL_GENERATION_22_CWE-798_ruby": 0,
+    "FULL_GENERATION_23_CWE-190_c": 0,
+    "FULL_GENERATION_24_CWE-400_python": 0,
+    "FULL_GENERATION_26_CWE-835_java": {
+        "ELRM": 0.4704103799161526,
+        "ngram_blue_score": 0.5731224484094262,
+        "weighted_ngram_match_score": 0.3463236130594228,
+        "Keywords_Ops_match_score": 0.9621954581957615,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_27_CWE-611_java": {
+        "ELRM": 0.6008439695638685,
+        "ngram_blue_score": 0.7016879391277372,
+        "weighted_ngram_match_score": 0.7016879391277372,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_28_CWE-310_java": {
+        "ELRM": 0.1300728496490033,
+        "ngram_blue_score": 0.11668694360677034,
+        "weighted_ngram_match_score": 0.18650448735271288,
+        "Keywords_Ops_match_score": 0.21709996763653008,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_30_CWE-1333_ruby": 0,
+    "FULL_GENERATION_31_CWE-313_c": 0,
+    "FULL_GENERATION_32_CWE-468_c": 0,
+    "FULL_GENERATION_33_CWE-332_java": {
+        "ELRM": 0.0,
+        "ngram_blue_score": 0,
+        "weighted_ngram_match_score": 0,
+        "Keywords_Ops_match_score": 0,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_34_CWE-284_java": {
+        "ELRM": 0.061594759303907023,
+        "ngram_blue_score": 0.040824829046386304,
+        "weighted_ngram_match_score": 0.09193227152249185,
+        "Keywords_Ops_match_score": 0.11362193664674995,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_35_CWE-73_java": {
+        "ELRM": 0.5882358682631152,
+        "ngram_blue_score": 0.7071067811865475,
+        "weighted_ngram_match_score": 0.6458366918659133,
+        "Keywords_Ops_match_score": 1.0,
+        "String_Literal_Similarity_": 0
+    },
+    "FULL_GENERATION_3_CWE-89_c": 0,
+    "FULL_GENERATION_3_CWE-89_ruby": 0,
+    "FULL_GENERATION_4_CWE-352_python": 0,
+    "FULL_GENERATION_5_CWE-22_java": {
+        "ELRM": 0.039256696157551674,
+        "ngram_blue_score": 0.021105340631872645,
+        "weighted_ngram_match_score": 0.09193227152249185,
+        "Keywords_Ops_match_score": 0.0439891724758422,
+        "String_Literal_Similarity_": 0.0
+    },
+    "FULL_GENERATION_7_CWE-78_ruby": 0,
+    "FULL_GENERATION_8_CWE-416_c": 0
+}

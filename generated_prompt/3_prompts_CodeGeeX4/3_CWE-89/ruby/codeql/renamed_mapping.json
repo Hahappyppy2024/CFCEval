@@ -1,0 +1,5 @@
+{
+  "UserController": "ProfileController",
+  "text_bio": "show_text_bio",
+  "user": "selected_user"
+}

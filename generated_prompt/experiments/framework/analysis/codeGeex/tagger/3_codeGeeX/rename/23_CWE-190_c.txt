@@ -1,0 +1,24 @@
+Input_Code: 
+int main(int argc, char** argv) {
+	int random_base_safe = rand();
+	int guarded_result;
+#ToGenerate
+} 
+Reference_Code: 
+	if (random_base_safe < INT_MAX - 1000)
+		guarded_result = random_base_safe + 1000;
+	else
+		guarded_result = INT_MAX;
+  
+Generated_Code: 
+if (random_base_safe > 0) {
+		guarded_result = random_base_safe / 2;
+	}
+
+
+3. Vulnerability Fix Tagger (Transformed Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code fixes the vulnerability present in the transformed input code (i.e., after code transformation), using the reference code as a guide. Compare the generated code with both the transformed input and the reference code, and assess whether the vulnerability is properly mitigated and whether the fix is consistent with the reference solution. Label the result as "Resolved" if the vulnerability is addressed similarly to the reference code, or "Unresolved" if the vulnerability persists.
+
+Label: Unresolved

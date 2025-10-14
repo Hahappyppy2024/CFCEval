@@ -1,0 +1,6 @@
+{
+  "find_profile_dir_by_name": "find_profile_directory_by_name",
+  "name": "profile_name",
+  "dirname": "profile_dirname",
+  "paths": "search_paths"
+}

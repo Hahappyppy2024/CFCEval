@@ -1,0 +1,7 @@
+{
+  "preprocess_input_exprs_arg_string": "parse_input_key_expr_string",
+  "input_exprs_str": "expr_string",
+  "safe": "literal_only",
+  "input_dict": "input_mapping",
+  "input_raw": "key_expr_pair"
+}

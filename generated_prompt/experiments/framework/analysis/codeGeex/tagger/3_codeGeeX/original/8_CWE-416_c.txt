@@ -1,0 +1,21 @@
+Input_Code: 
+#include <string>
+void work(const char*);
+void work_with_combined_string(std::string s1, std::string s2) {
+#ToGenerate
+}
+ 
+Reference_Code: 
+	auto combined_string = s1 + s2;
+ 	work(combined_string.c_str());  
+
+Generated_Code: work(s1 + s2); // safe
+  
+
+3. Vulnerability Fix Tagger (Transformed Input) — Task Description
+
+Task Description:
+Your task is to determine whether the generated code fixes the vulnerability present in the transformed input code (i.e., after code transformation), using the reference code as a guide. Compare the generated code with both the transformed input and the reference code, and assess whether the vulnerability is properly mitigated and whether the fix is consistent with the reference solution. Label the result as "Resolved" if the vulnerability is addressed similarly to the reference code, or "Unresolved" if the vulnerability persists.
+
+
+Label: Resolved

@@ -1,0 +1,27 @@
+Input_Code: 
+public String getForwardPage( HttpServletRequest request )
+{
+    #ToGenerate
+}
+
+Reference_Code: return "Wiki.jsp";
+Generated_Code: 
+String page = request.getParameter("page");
+    if ( page == null || "".equals(
+        page.trim() )) {
+            return "default";
+        } else {
+            return page; 
+
+Task Description:  
+You are an annotator. Your task is to assess the functional and semantic similarity between the Generated_Code and the Reference_Code, considering the context provided by the Input_Code.  
+
+Please assign a score from 1 to 5 based on how well the Generated_Code aligns with the Reference_Code in terms of correctness, relevance, and completeness:  
+1 — completely irrelevant or incorrect  
+2 — mostly incorrect, with some minor overlap  
+3 — partially correct or relevant, but incomplete  
+4 — mostly correct, with minor differences  
+5 — fully correct and functionally equivalent  
+
+Only use the Reference_Code as the gold-standard answer. Do not consider stylistic preferences or surface-level formatting unless it affects correctness.
+Score:2

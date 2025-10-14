@@ -1,0 +1,6 @@
+{
+  "work_with_combined_string_bad": "callWithUnsafeConcatenation",
+  "s1": "first_part",
+  "s2": "second_part",
+  "combined_string": "concatenated_string"
+}
