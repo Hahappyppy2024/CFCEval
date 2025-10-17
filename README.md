@@ -21,7 +21,7 @@ The human study covers four code LLMs (Cursor, Copilot, CodeGeeX, DeepSeekCoder)
 ### Visualization
 
 
-<img src="https://https://github.com/Hahappyppy2024/CFCEval/blob/main/correlation.png?raw=true" width="400"/>
+<img src="https://github.com/Hahappyppy2024/CFCEval/blob/main/correlation.png?raw=true" width="400"/>
 
 *Figure.* Pearson correlation between **HumanAvg** and automatic metrics (BLEU, CodeBLEU, ELRM) for each model.
 
