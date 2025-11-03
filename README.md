@@ -44,7 +44,7 @@ Post-Transfromatin Fixing Capability (PTFixCap.) repeats the judgment on F_t to 
 
 Element-Level Relevance (ELeRelv.) quantifies fine-grained relevance via ELRM.
 
-Case Study Instances: https://github.com/AAAstudyAAA/CFCEval4AIWARE/blob/main/Pilot%20Case%20Study.pdf
+Case Study Instances: https://github.com/Hahappyppy2024/CFCEval/blob/main/Pilot%20Case%20Study.pdf
 
 ### 2.1 How we judge FixCap. / PTFixCap.
 
